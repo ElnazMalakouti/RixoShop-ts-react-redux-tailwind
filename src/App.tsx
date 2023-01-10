@@ -1,11 +1,11 @@
 import './App.css';
-import HomePage from './pages/HomePage';
+import AssemblyPage from './pages/AssemblyPage';
 
 function App() {
 
   return (
     <>   
-      <HomePage/>
+      <AssemblyPage/>
     </>
   );
 }

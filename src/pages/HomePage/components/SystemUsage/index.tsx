@@ -27,9 +27,11 @@ const SystemUsage = () => {
             </div>
 
             <div className="w-[40%] m-auto flex flex-col justify-center items-center gap-[2rem] z-50">
-                <p className="font-[Peyda-Bold]">
-                    نوع کاربری سیستم خود را انتخاب نمایید
-                </p>
+                <div className={`w-full flex justify-center`}>
+                    <p className="font-[Peyda-Bold]">
+                        نوع کاربری سیستم خود را انتخاب نمایید
+                    </p>
+                </div>
 
                 <div className="w-full flex flex-row justify-between items-center">
                     <div className="w-[90px] h-[126px] flex flex-col justify-center items-center gap-3">
@@ -64,7 +66,9 @@ const SystemUsage = () => {
                     </div>
                 </div>
 
-                <button className="w-[180px] h-[44px] bg-[#009688] text-white font-[Peyda-Reqular] rounded-[.5rem]">مرحله بعد</button>
+                <div className={`w-full flex justify-center`}>
+                    <button className="w-[180px] h-[44px] bg-[#009688] text-white font-[Peyda-Reqular] rounded-[.5rem]">مرحله بعد</button>
+                </div>
             </div>
 
             <div className="absolute left-[0]">
