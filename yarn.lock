@@ -6677,6 +6677,11 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
 
+persian-digit-tools@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/persian-digit-tools/-/persian-digit-tools-1.0.2.tgz#3f3e6f4bb4601ac16b81090fef455683e8940c97"
+  integrity sha512-zmbUKiHAcFs5PWytL1ZUmyrSFbEjVHRBBuLpYyUoTBdAJYm9UJ87fQ/WVpYq7jir/sx6dctG+97e4xglfaOMtA==
+
 picocolors@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-0.2.1.tgz#570670f793646851d1ba135996962abad587859f"

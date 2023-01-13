@@ -50,3 +50,8 @@ code {
   font-family: "Peyda-Bold";
   src: url("../public/fonts/Peyda-SemiBold.ttf");
 }
+
+@font-face {
+  font-family: "Peyda-Medium";
+  src: url("../public/fonts/Peyda-Medium.ttf");
+}
