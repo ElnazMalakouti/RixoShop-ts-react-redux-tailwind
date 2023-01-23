@@ -70,23 +70,23 @@ const SelectedProduct = ({
                     <span className="text-[#B6C5DC] line-through text-[15px]">{
                         productPrice ? DigitConvertor.toPersian(String(productPrice?.toLocaleString())) : 0 
                     }</span>
-                    <div className="w-[35px] h-[18px] rounded-[.5rem] bg-[#15A394] text-white flex justify-center items-start">
+                    <div className="w-[35px] h-[18px] rounded-[.5rem] bg-[#009688] text-white flex justify-center items-start">
                         %<span>{
                             discountPercent ? DigitConvertor.toPersian(String(discountPercent)) : 0
                         }</span>
                     </div>
                 </div>
                 <div className="w-full flex flex-row justify-end items-center gap-1 font-[Peyda-Bold] text-[22px]">
-                    <span className="text-[#15A394]">{
+                    <span className="text-[#009688]">{
                         discountPercent
                             ?
                             DigitConvertor.toPersian(String((+productPrice - (+productPrice * +discountPercent) / 100)?.toLocaleString()))
                             :
-                            DigitConvertor.toPersian(String(productPrice?.toLocaleString())) 
+                            DigitConvertor.toPersian(String(+productPrice?.toLocaleString()))
                     }</span>
                     <img alt="" src="pics/Price.png" />
                 </div>
-                <Button className="w-full h-[40px] mb-[1rem] rounded-[.25rem] bg-[#FC1B50] border-[1px] border-[#FC1B50] text-white text-[15px] font-[Peyda-Bold] ">افزودن به لیست</Button>
+                <Button className="w-full h-[40px] mb-[1rem] rounded-[.5rem] bg-[#FC1B50] border-[1px] border-[#FC1B50] text-white text-[15px] font-[Peyda-Bold] ">افزودن به لیست</Button>
             </div>
         </>
     )

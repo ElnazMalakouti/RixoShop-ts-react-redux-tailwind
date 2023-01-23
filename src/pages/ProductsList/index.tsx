@@ -8,6 +8,9 @@ import { BsArrowRight } from "react-icons/bs"
 import { BsArrowLeft } from "react-icons/bs"
 import ProductCard from "./components/ProductCard"
 import SelectedProduct from "./components/SelectedProduct"
+import { DigitConvertor } from 'persian-digit-tools';
+import {HiPlus} from "react-icons/hi"
+import Button from "../../Component/Button"
 
 interface Icategories {
     id: string,
@@ -60,9 +63,9 @@ const ProductsList = () => {
 
     return (
         <>
-            <div className="w-full h-full flex flex-col">
+            <div className="w-full h-full flex flex-col bg-[#EDEDED]">
 
-                <div className="w-full h-[13rem] flex flex-col bg-[#EDEDED]">
+                <div className="w-full bg-white h-[13rem] flex flex-col">
 
                     <div className="w-full flex flex-row justify-between items-center">
                         <div className="w-[11%] h-auto m-[1rem]">
@@ -91,7 +94,7 @@ const ProductsList = () => {
                 </div>
 
 
-                <div className="w-full h-full flex flex-row justify-center items-start gap-2 mt-[2rem] mb-[2rem]">
+                <div className={`w-full h-full flex flex-row justify-center items-start gap-2 mt-[2rem] ${!selectedProduct ? 'mb-[2rem]' : 'mb-0'} relative`}>
 
                     <>
                         <div className="w-[820px] h-full flex flex-row flex-wrap gap-2">
@@ -110,7 +113,7 @@ const ProductsList = () => {
                             }
                         </div>
 
-                        <div className="w-[250px] h-full mt-2">
+                        <div className={`w-[250px] h-full mt-2 right-[1200px] ${selectedProduct ? '' : 'absolute'}`}>
                             {
                                 selectedProduct && graphicCardsState?.map(item => {
                                     if (+item.id === +selectedProduct) {
@@ -134,6 +137,26 @@ const ProductsList = () => {
                         </div>
                     </>
 
+                </div>
+
+                
+                <div className="w-full  flex flex-row justify-start items-end relative">
+                    <div className="w-[45%] h-[117px] flex flex-row bg-white rounded-tl-[2rem]">
+                        <div className="w-[200px] h-full flex flex-col justify-center items-start gap-1 mr-[5rem]">
+                            <p className="text-[#78807C] text-[17px] font-[Peyda-Regular]">مبلغ قابل پرداخت</p>
+                            <div className="flex flex-row justify-end items-center gap-2 text-[26px]">
+                                <p className="text-[#009688] font-[Peyda-Bold]">{DigitConvertor.toPersian(String((18652000)?.toLocaleString()))}</p>
+                                <img className="w-[25px] h-[20px]" alt="" src="pics/Price.png" />
+                            </div>
+                        </div>
+                        <div className="w-[200px] h-full flex flex-row justify-center items-center gap-2 font-[Peyda-Bold]">
+                            <button className="w-[25px] h-[25px] rounded-[50%] border border-[3px] border-black flex justify-center items-center"><><HiPlus/></></button>
+                            <p className="font-[Peyda-Bold] text-[18px]">مشاهده لیست خرید</p>
+                        </div>
+                        <Button className="z-50 w-[162px] h-[44px] m-auto rounded-[.5rem] bg-[#009688] border-[1px] border-[#009688] text-white text-[15px] font-[Peyda-Bold] ">افزودن به سبد خرید</Button>
+                    </div>
+                    <div className="w-[6%] h-[114px] bg-white rounded-tl-[2rem] absolute right-[41%] bottom-0 rotate-45">div</div>
+                    <div className="w-[54%] h-[49px] bg-white text-white absolute left-0">div</div>                    
                 </div>
 
             </div>

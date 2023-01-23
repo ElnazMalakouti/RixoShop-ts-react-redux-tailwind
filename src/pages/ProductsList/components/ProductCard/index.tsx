@@ -13,7 +13,7 @@ interface props {
 
 const ProductCard = ({ productId , productImage, productName, discountPercent, productPrice , selectedProduct , setSelectedProduct } : props) => {
     return (
-        <div className={`w-[130px] h-[262px] rounded-[.5rem] flex flex-col gap-2 p-2 border-[3px] ${selectedProduct === productId ? 'border-[#FC1B50]' : ''} hover:border-[#FC1B50] mt-2 cursor-pointer`} onClick={()=> setSelectedProduct(productId)}>
+        <div className={`w-[130px] h-[262px] bg-white rounded-[.5rem] flex flex-col gap-2 p-2 border-[3px] ${selectedProduct === productId ? 'border-[#FC1B50]' : ''} hover:border-[#FC1B50] mt-2 cursor-pointer`} onClick={()=> setSelectedProduct(productId)}>
 
             <div className="w-full min-h-[60px] max-h- h-[30%] flex justify-center items-center">
                 <img alt="" src={productImage} />
@@ -31,7 +31,7 @@ const ProductCard = ({ productId , productImage, productName, discountPercent, p
                 <span className="text-[#B6C5DC] line-through text-[12px]">{
                     productPrice ? DigitConvertor.toPersian(String(productPrice?.toLocaleString())) : 0
                 }</span>
-                <div className="w-[35px] h-[18px] rounded-[.5rem] bg-[#15A394] text-white text-[12px] flex justify-center items-center">
+                <div className="w-[35px] h-[18px] rounded-[.5rem] bg-[#009688] text-white text-[12px] flex justify-center items-center">
                     %<span>{
                         discountPercent ? DigitConvertor.toPersian(String(discountPercent)) : 0
                         }</span>
@@ -39,7 +39,7 @@ const ProductCard = ({ productId , productImage, productName, discountPercent, p
             </div>
 
             <div className="w-full mt-1 flex flex-row justify-center items-center gap-1 font-[Peyda-Bold]">
-                <span className="text-[#15A394]">{
+                <span className="text-[#009688]">{
                     discountPercent 
                     ?                     
                     DigitConvertor.toPersian(String((productPrice-(productPrice * discountPercent) / 100)?.toLocaleString()))
